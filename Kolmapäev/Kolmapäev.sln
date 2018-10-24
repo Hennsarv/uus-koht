@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kolmapäev", "Kolmapäev\Kolmapäev.csproj", "{875ADF6A-7CB8-4535-AED6-41C8C9813E9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{875ADF6A-7CB8-4535-AED6-41C8C9813E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875ADF6A-7CB8-4535-AED6-41C8C9813E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875ADF6A-7CB8-4535-AED6-41C8C9813E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875ADF6A-7CB8-4535-AED6-41C8C9813E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BD35B32-6301-433E-AB2B-DAED619DF80F}
+	EndGlobalSection
+EndGlobal
