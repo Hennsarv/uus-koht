@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MInuTeretus
 {
     class Program
@@ -33,6 +34,10 @@ namespace MInuTeretus
 
             // see on esceipimata string \ ei ole vaja topeldada
             string failinimi = @"C:\Users\sarvi\Source\Repos\Teispäev\MInuTeretus\MInuTeretus\App.config";
+
+            // näitame, kuidas toimib \r
+            Console.WriteLine("Henn on tore poiss\rAnts");
+
 
             Console.Write("anna üks arv: ");
             string lugesin = Console.ReadLine();
