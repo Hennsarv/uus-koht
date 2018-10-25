@@ -40,23 +40,23 @@ namespace NeljapäevaneÜlesanne
             // siin on oluline, et vanuste massiiv oleks (vähemalt) samapikk
             int[] vanused = new int[nimekiri.Length];
             // laiskusest jätan selle vanuste küsimise ära, pärast teen
-            vanused = new int[] { 63, 80, 28, 40, 80 };
+            vanused = new int[] { 63, 80, 28, 40, 17 };
             // NB! siin ei saa new int[] ära jätta - seda saab vaid siis,
             //     kui initsializer on muutuja definitsiooniga samas lauses
 
             // kontrollliks trükime välja
+            Console.WriteLine("\nNimekiri kontrolliks\n");
             for (int i = 0; i < nimekiri.Length; i++)
             {
                 Console.WriteLine($"{nimekiri[i]} vanus on {vanused[i]}");
             }
-
-
-
+                        
             // kuidas leiame keskmise
             // liidame vanused kokku ja jagame õpilaste arvuga
             int summa = 0;
             foreach (int v in vanused) summa += v;
-            Console.WriteLine($"Keskmine vanus on {(summa) / nimekiri.Length}");
+            Console.WriteLine($"\nKeskmine vanus on {(summa) / nimekiri.Length}\n");
+            
             // NB! siin tuleb vale vastus - õige oleks 45,6
 
             // edasi vaja leida, kes on kõige vanem
