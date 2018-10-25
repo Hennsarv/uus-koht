@@ -40,9 +40,23 @@ namespace NeljapäevaneÜlesanne
             // siin on oluline, et vanuste massiiv oleks (vähemalt) samapikk
             int[] vanused = new int[nimekiri.Length];
             // laiskusest jätan selle vanuste küsimise ära, pärast teen
-            vanused = new int[] { 63, 80, 28, 40, 17 };
+            //vanused = new int[] { 63, 80, 28, 40, 80 };
             // NB! siin ei saa new int[] ära jätta - seda saab vaid siis,
             //     kui initsializer on muutuja definitsiooniga samas lauses
+
+            // teeme siia vanuste lugemise
+            for (int i = 0; i < nimekiri.Length; i++)
+            {
+                Console.Write($"Anna õpilase {nimekiri[i]} vanus: ");
+                int vastus; // = int.Parse(Console.ReadLine());
+                while(! int.TryParse(Console.ReadLine(), out vastus ))
+                {
+                    Console.WriteLine("see pole miski vanus");
+                    Console.Write("anna uuesti: ");
+                }
+                vanused[i] = vastus;
+            }
+
 
             // kontrollliks trükime välja
             Console.WriteLine("\nNimekiri kontrolliks\n");
@@ -53,9 +67,9 @@ namespace NeljapäevaneÜlesanne
                         
             // kuidas leiame keskmise
             // liidame vanused kokku ja jagame õpilaste arvuga
-            int summa = 0;
+            double  summa = 0;
             foreach (int v in vanused) summa += v;
-            Console.WriteLine($"\nKeskmine vanus on {(summa+0.0) / nimekiri.Length}\n");
+            Console.WriteLine($"\nKeskmine vanus on {(summa) / nimekiri.Length}\n");
 
             // NB! tagapool läheb seda keskmist vaja - jätame meelde
             double keskmine = summa / nimekiri.Length;
@@ -65,6 +79,9 @@ namespace NeljapäevaneÜlesanne
             // edasi vaja leida, kes on kõige vanem
             // leiame kõige suurema numbri massiivis ja jätame meelde,
             // mitmes see oli - siis saame nime öelda (teisest)
+
+            
+            
 
             // oletame, et 1. nimekirjas on kõige vanem
             int mitmes = 0; int vanus = vanused[mitmes];
@@ -79,7 +96,18 @@ namespace NeljapäevaneÜlesanne
             // kes siis vastuseks satub - PROOVI!
             // kuidas teha nii, et KÕIK samavanad (vanimad) välja tükitaks
 
-            double kaugus = Math.Abs(keskmine - vanused[0]);
+            //for (int i = 0; i < nimekiri.Length; i++)
+            //    if(vanused[i] == vanus)
+            //{
+            //    Console.WriteLine($"Kõige vanem on {nimekiri[i]} ta on {vanus} aastane");
+
+            //    }
+
+
+
+
+            double kaugus = (keskmine - vanused[0]);
+            if (kaugus < 0) kaugus = -kaugus;
             mitmes = 0;
             for (int i = 0; i < vanused.Length; i++)
                 if(Math.Abs(keskmine-vanused[i]) < kaugus)
