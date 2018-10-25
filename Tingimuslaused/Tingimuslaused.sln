@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tingimuslaused", "Tingimuslaused\Tingimuslaused.csproj", "{B96B0351-CD4F-46CF-AC33-7F33DF2F0D90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valgusfoor", "Valgusfoor\Valgusfoor.csproj", "{8EF74A85-12E1-4442-9B5B-C530A9714E5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B96B0351-CD4F-46CF-AC33-7F33DF2F0D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B96B0351-CD4F-46CF-AC33-7F33DF2F0D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B96B0351-CD4F-46CF-AC33-7F33DF2F0D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF74A85-12E1-4442-9B5B-C530A9714E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF74A85-12E1-4442-9B5B-C530A9714E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF74A85-12E1-4442-9B5B-C530A9714E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF74A85-12E1-4442-9B5B-C530A9714E5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
