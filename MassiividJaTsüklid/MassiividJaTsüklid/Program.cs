@@ -41,7 +41,7 @@ namespace MassiividJaTsüklid
 
             // esimene kõige lihtsam tsükkel
             // FOR-tsükkel
-
+            Console.WriteLine("\ntavaline FOR tsükkel\n");
             for (int i = 0; i < arvud.Length; i++)
             {
                 Console.WriteLine(arvud[i]);
@@ -63,6 +63,7 @@ namespace MassiividJaTsüklid
             // teine on while tsükkel (mid ategelikult ei ole vaja)
 
             // võimalik while tsükkel
+            Console.WriteLine("\nesimene WHILE tsükkel\n");
             int j = arvud.Length;
             while ( j > 0)
             {
@@ -70,14 +71,17 @@ namespace MassiividJaTsüklid
             }
 
             // seesama ÜLESANNE for tsükliga
-            for (int jj = arvud.Length; jj > 0; jj--)
+            Console.WriteLine("\nseesama FOR tsükliga\n");
+            for (int jj = arvud.Length; jj > 0;)
             {
-                Console.WriteLine(arvud[jj]);
+                Console.WriteLine(arvud[--jj]);
             }
 
             // foreach tsükkel
             // töötab massiividel ja teistel kollektsioonidel
             // keeruline selgitada kuidas, aga näe toimib ja lihtne lugeda
+
+            Console.WriteLine("\nFOREACH tsükkel\n");
             {
                 int jrknr = 0;
                 foreach (int x in arvud)
@@ -87,12 +91,19 @@ namespace MassiividJaTsüklid
 
             }
 
+            Console.WriteLine("\nFOREACH asemel FOR\n");
+            for(var l = arvud.GetEnumerator(); l.MoveNext();)
+                Console.WriteLine(l.Current);
+
+            Console.WriteLine("\nWHILE tsükliga otsimine\n");
             {
                 int k = 0; // muutuja k ei lähe üleüldiseks
                 while (arvud[k] == 22 || ++k > arvud.Length) ;
                 if (k < arvud.Length) Console.WriteLine($"leidsin pesast {k}");
                 else Console.WriteLine("ei leidnud seekord");
             }
+
+            Console.WriteLine("\nWHILE tsükliga küsimine\n");
             Console.Write("anna üks arv");
             int vastus = 0;
             while( ! int.TryParse(Console.ReadLine(), out vastus))
