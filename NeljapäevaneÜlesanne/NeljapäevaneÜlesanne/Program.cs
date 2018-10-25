@@ -40,7 +40,7 @@ namespace NeljapäevaneÜlesanne
             // siin on oluline, et vanuste massiiv oleks (vähemalt) samapikk
             int[] vanused = new int[nimekiri.Length];
             // laiskusest jätan selle vanuste küsimise ära, pärast teen
-            vanused = new int[] { 63, 80, 28, 40, 17 };
+            vanused = new int[] { 63, 80, 28, 40, 80 };
             // NB! siin ei saa new int[] ära jätta - seda saab vaid siis,
             //     kui initsializer on muutuja definitsiooniga samas lauses
 
