@@ -55,8 +55,11 @@ namespace NeljapäevaneÜlesanne
             // liidame vanused kokku ja jagame õpilaste arvuga
             int summa = 0;
             foreach (int v in vanused) summa += v;
-            Console.WriteLine($"\nKeskmine vanus on {(summa) / nimekiri.Length}\n");
-            
+            Console.WriteLine($"\nKeskmine vanus on {(summa+0.0) / nimekiri.Length}\n");
+
+            // NB! tagapool läheb seda keskmist vaja - jätame meelde
+            double keskmine = summa / nimekiri.Length;
+
             // NB! siin tuleb vale vastus - õige oleks 45,6
 
             // edasi vaja leida, kes on kõige vanem
@@ -75,6 +78,21 @@ namespace NeljapäevaneÜlesanne
             //NB! mõtle, mis juhtub, kui samavanu on mitu, 
             // kes siis vastuseks satub - PROOVI!
             // kuidas teha nii, et KÕIK samavanad (vanimad) välja tükitaks
+
+            double kaugus = Math.Abs(keskmine - vanused[0]);
+            mitmes = 0;
+            for (int i = 0; i < vanused.Length; i++)
+                if(Math.Abs(keskmine-vanused[i]) < kaugus)
+                {
+                    kaugus = Math.Abs(keskmine - vanused[i]);
+                    mitmes = i;
+
+                }
+            Console.WriteLine($"\nkeskmisele lähim on {nimekiri[mitmes]}\n");
+
+            // NB! nüüd, kui keskmise-vanima-lähima arvutamine NÄIDISVANUSTEGA
+            // on tehtud, nüüd võiks siis lisada (algusse) selle osa, mis käib
+            // vanuseid küsimas
         }
     }
 }
