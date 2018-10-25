@@ -20,7 +20,7 @@ kui valmis, vaatad, kuidas naabril läheb ja kas ta vajab abi või nõu
 
 Kui viitsimist, teed sama ülesande, aga nii, et ksüid iga inimese sünnipäeva
 Kui VEEL viitsimist, siis sünnipäeva asemel isikukoodi 
-(vajab isesesivat pusimist) punktid 1. 2. 3. jäävad samaks * /
+(vajab isesesivat pusimist) punktid 1. 2. 3. jäävad samaks 
 */
 
 namespace NeljapäevaneÜlesanne
@@ -43,6 +43,21 @@ namespace NeljapäevaneÜlesanne
             vanused = new int[] { 63, 80, 28, 40, 17 };
             // NB! siin ei saa new int[] ära jätta - seda saab vaid siis,
             //     kui initsializer on muutuja definitsiooniga samas lauses
+
+            // kontrollliks trükime välja
+            for (int i = 0; i < nimekiri.Length; i++)
+            {
+                Console.WriteLine($"{nimekiri[i]} vanus on {vanused[i]}");
+            }
+
+
+
+            // kuidas leiame keskmise
+            // liidame vanused kokku ja jagame õpilaste arvuga
+            int summa = 0;
+            foreach (int v in vanused) summa += v;
+            Console.WriteLine($"Keskmine vanus on {summa / nimekiri.Length}");
+
         }
     }
 }
