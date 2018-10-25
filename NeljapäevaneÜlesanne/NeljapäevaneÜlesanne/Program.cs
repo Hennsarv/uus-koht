@@ -56,8 +56,25 @@ namespace NeljapäevaneÜlesanne
             // liidame vanused kokku ja jagame õpilaste arvuga
             int summa = 0;
             foreach (int v in vanused) summa += v;
-            Console.WriteLine($"Keskmine vanus on {summa / nimekiri.Length}");
+            Console.WriteLine($"Keskmine vanus on {(summa) / nimekiri.Length}");
+            // NB! siin tuleb vale vastus - õige oleks 45,6
 
+            // edasi vaja leida, kes on kõige vanem
+            // leiame kõige suurema numbri massiivis ja jätame meelde,
+            // mitmes see oli - siis saame nime öelda (teisest)
+
+            // oletame, et 1. nimekirjas on kõige vanem
+            int mitmes = 0; int vanus = vanused[mitmes];
+            // nüüd vaatame teised vanused üle ja kui mõni on suurem
+            // jätame selle meelde hoopis
+            for (int i = 1; i < vanused.Length; i++)
+                if (vanused[i] > vanus)
+                { vanus = vanused[i]; mitmes = i; }
+            Console.WriteLine($"Kõige vanem on {nimekiri[mitmes]} ta on {vanused[mitmes]} aastane");
+
+            //NB! mõtle, mis juhtub, kui samavanu on mitu, 
+            // kes siis vastuseks satub - PROOVI!
+            // kuidas teha nii, et KÕIK samavanad (vanimad) välja tükitaks
         }
     }
 }
